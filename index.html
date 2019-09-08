@@ -11,7 +11,14 @@ Based on: http://estelle.github.com/ctwebdev
 <meta name="viewport" content="width=device-width,user-scalable=yes">
 <meta name="description" content="Pour comprendre la Performance Web, les développeur·se·s doivent d’abord comprendre comment fonctionne un navigateur. Partons à la découverte du navigateur et de ce qu’il s’y passe quand un·e internaute demande une page.">
 <base target="_play">
-<style>
+<style> /* a11y override */
+  * {
+    background-repeat: no-repeat;
+  }
+  body {
+    color: white;
+    background-color: black;
+  }
 </style>
 <link rel="stylesheet" href="css/index.css" class="removeForAT">
 </head>
@@ -25,7 +32,8 @@ Based on: http://estelle.github.com/ctwebdev
   <h1>Navigateur : les coulisses du chargement</h1>
 </header>
 <section class="content">
-  <p>https://estelle.github.io/browsers</p>
+  <button id="killCSS" class="skiplink">Remove stylesheet to make accessible</button>
+  <p><a href="https://estelle.github.io/browsers" target="_self">estelle.github.io/browsers</a></p>
 </section>
 </div>
 
@@ -70,12 +78,35 @@ Based on: http://estelle.github.com/ctwebdev
 </div>
 
 
-<!-- slide templates -->
+<!-- browser -->
 <div class="slide" style="background-image: url(img/browser.png);">
 <header>
   <h1>Le Navigateur</h1>
 </header>
+
+<p class="alt">image: Navigateur</p>
 </div>
+
+
+<!-- browser + server -->
+<div class="slide" style="background-image: url(img/browser.png), url(img/server.svg); background-size: auto 50%, auto 25%;">
+<header>
+  <h1>Le Navigateur</h1>
+</header>
+
+<p class="alt">image: serveur</p>
+</div>
+
+
+
+<!-- browser + thread -->
+<div class="slide" style="background-image: url(img/browser.png), url(img/thread.png); background-size: auto 50%, auto 25%;">
+<header>
+  <h1>Le Navigateur</h1>
+</header>
+<p class="alt">image: fil</p>
+</div>
+
 
 
 
@@ -87,16 +118,36 @@ Based on: http://estelle.github.com/ctwebdev
 </section>
 </div> 
 
-<div class="slide">
+
+
+
+
+
+<div class="slide" style="background-image: url(img/weak.png);">
 <header>
-  <h1><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/" target="resource"></a></code> property</h1>
+  <h1>Les pouvoir mobiles</h1>
 </header>
 <section class="content">
-  <p></p>
-  <pre contenteditable></pre>
 </section>
+</div> 
+
+
+
+<!-- browser + server -->
+<div class="slide" style="background-image: url(img/browser.png), url(img/server.svg); background-size: auto 50%, auto 25%;">
+<header>
+  <h1>Le Navigateur</h1>
+</header>
+
+<p class="alt">image: serveur</p>
 </div>
 
+
+
+
+
+
+<!-- templates -->
 <div class="slide object">
 <header>
   <h1></h1>
