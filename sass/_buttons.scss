@@ -1,0 +1,16 @@
+#next,
+#back {
+  z-index: 1000;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #333;
+  background-color: #ccc;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding: 5px 10px;
+  letter-spacing:1px;
+  font-size: 1rem;
+}
+#next {left: auto; right: 5px;}

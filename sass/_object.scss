@@ -1,0 +1,15 @@
+.object object, .object .img {
+  height: 100%;
+  width: 100%;
+}
+.objectlink {
+position: absolute;
+top: 0;
+right: 0;
+background-color: rgb(122,128,144);
+color: #FFF;
+padding: 5px 20px;
+border-radius: 0 0 0 40px;
+text-decoration: none;
+font-size: 0.8rem;
+}

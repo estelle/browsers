@@ -1,0 +1,89 @@
+.slides,
+.slide {
+}
+.slides {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.slide {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+.past, .current, .future {
+  display: block;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.current {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide.intro {
+  text-align: center;
+  font-size: 2rem;
+}
+.slide.intro hgroup {
+  margin-top: 200px;
+}
+.slide textarea.mynotes {
+    -webkit-appearance: none;
+    border: 1px #aaa solid;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-style: italic;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    padding: 5px;
+    box-sizing: border-box;
+    }
+td,
+th {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.invalid {
+  background-color: red;
+}
+.slide.section {
+  text-align: center;
+}
+.slide li {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.slide img {
+  max-height: 90%;
+  border: 1px solid white;
+  text-align: center;
+}
+.slide p {
+  font-size: 1.5rem;
+  margin: 1rem 0 0 0;
+}
+body .slide {
+  background-size: 100%;
+}
+.slide.bigbg {
+  background-size: cover;
+  h1 {
+    margin: 0 -2vw;
+    padding: 0 2vw;
+    background-color: rgba(0,0,0,0.3);
+  }
+  .alt {
+    color: rgba(0,0,0,0.1); font-size: 1px;
+  }
+}
+.photocredit {
+  color: #ccc;
+  position: absolute; bottom: 1em; right: 1em;
+}
