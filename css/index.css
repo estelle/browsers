@@ -298,11 +298,11 @@ a:hover {
 }
 
 pre {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #0000001a;
   border-radius: 8px;
-  border: 1px solid white;
+  border: 1px solid #00000033;
 }
 pre b, pre strong {
   font-weight: strong;
