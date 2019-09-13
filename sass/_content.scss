@@ -1,4 +1,7 @@
 /* Content */
+img {
+  border: none;
+}
 header {
   font-weight: normal;
   left: 30px;
@@ -18,7 +21,7 @@ footer {
   font-size: 1rem;
   margin: 20px 0 0 30px;
 }
-a{
+a {
   color: inherit;
   display: inline-block;
   text-decoration: underline dotted 1px;
@@ -28,12 +31,10 @@ a{
     text-decoration: underline;
   }
 }
+
 pre {
   font-size: 1rem;
   padding: 10px 20px;
-  background: #0000001a;
-  border-radius: 8px;
-  border: 1px solid #00000033;
   b, strong {
     font-weight: strong;
   }
@@ -53,3 +54,58 @@ pre {
 p.alt {position: absolute; top: 110vh;}
 
 
+.mostflex,
+.twoimages {
+  display: flex; 
+  gap: 1em; 
+  justify-content: center; 
+  align-items: center;
+  list-style-type: none;
+  img {
+    height: 24vh;
+    max-height: 200px;
+  }
+  img[src*=both] {
+    height: 48vh;
+    max-height: 400px;
+  }
+}
+.twoimages { 
+  height: calc(100vh - 6rem);
+  min-height: 80px;
+}
+
+.thought p {
+  padding: 25px;
+  margin: -50px 0 50px;
+  &,
+  &::before,
+  &::after  {
+  border-radius: 50%;
+  border: 5px solid var(--text);
+  background-color: var(--center);
+  position:relative;
+ }
+ &::before,
+ &::after {
+  content: '';
+  position:absolute;
+  left: 20%; bottom: -30px;
+  height: 40px; width: 40px;
+ }
+ &::after {
+  left: 12%; bottom: -50px;
+  height: 20px; width: 20px;
+ }
+}
+.transport {
+  list-style-type: none;
+  text-align: center;
+  font-family: monospace;
+  span {
+    font-size: 0.6em;
+  }
+  li {
+    line-height: 0.8;
+  }
+}

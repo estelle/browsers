@@ -1,0 +1,28 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="300" height="300" viewBox="0 0 300 300">
+	<title>Laptop computer</title>
+<path  style="fill: transparent; mix-blend-mode: source-over; fill-opacity: 1; fill-rule: nonzero; vector-effect: non-scaling-stroke;" d="M0 0 L300 0 300 300 0 300 z"/>
+<g  style="mix-blend-mode: source-over;" transform="matrix(0.6004467320083462,0,0,0.6004467320083462,-1.081358810306031,12.29799984450565)">
+	<g  style="stroke: #000;">
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)" style="fill: #fff;">
+			<path d="M137.86 534.92h2.1l10.081-22.441H72.818l7.02 22.441h2.1m9.24 0h37.442m.014-27.237H72.818v4.796h77.223v-4.796H128.56"  style="stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+		</g>
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)">
+			<path d="M134.54 523.67l2.19-5.67m13.321-5.52H72.828m11.1 16.86L80.388 518h61.082l-5.1 11.34H83.928zm-.9-2.82h54.602m-55.502-2.82h56.822m-57.662-2.82h58.922M85.068 518l2.88 11.34m8.101 0L94.488 518m5.581 11.34l-.675-8.505m4.695 8.505l-.18-8.505m4.2 8.505l.36-8.505m3.72 8.505l.81-8.505m3.21 8.505l1.305-8.505m2.716 8.505l1.845-8.505m2.175 8.505l3.12-11.34m4.98 11.34l1.095-2.835m-5.115 2.835l3.72-11.34m-40.082 11.34L89.748 518m-16.92-10.317v4.796h77.223v-4.796"  style="fill: none; stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+		</g>
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)"  style="fill: #fff;">
+			<path d="M137.86 535.46H79.845v42.542h60.122V535.46h-2.1"  style="stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+		</g>
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)"  style="fill: orange; stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;">
+			<path d="M85.303 574.28h49.502v-35.101H85.303v35.101z"/>
+			<path d="M85.303 574.28h49.502v-35.101H85.303v35.101z"/>
+		</g>
+		<path d="M82.571 253.085h320.238"  style="fill: #e3e3e3; fill-rule: evenodd; stroke-width: 6.46875;"/>
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)">
+			<path d="M137.86 536.18h-9.24v-1.98h9.24v1.98z"  style="fill: none; stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+		</g>
+		<g transform="matrix(6.4691,0,0,-6.4691,-469.266,3741.035)" clip-path="url(#a)">
+			<path d="M81.943 536.18h9.24v-1.98h-9.24v1.98z"  style="fill: none; stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;"/>
+		</g>
+	</g>
+</g>
+</svg>

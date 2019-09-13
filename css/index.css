@@ -2,6 +2,7 @@
   --bg: hsl(310, 80%, 30%);
   --center: orange;
   --bglight: lighten(hsl(310, 80%, 30%), 20%);
+  --text: #ffffff;
 }
 
 #next,
@@ -92,12 +93,6 @@ th {
 .slide li {
   margin-bottom: 10px;
   font-size: 1.3rem;
-}
-
-.slide img {
-  max-height: 90%;
-  border: 1px solid white;
-  text-align: center;
 }
 
 .slide p {
@@ -238,21 +233,6 @@ a:hover {
   text-decoration: underline;
 }
 
-pre {
-  text-align: left;
-  font-size: 1.5rem;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-  border: 1px solid white;
-}
-
-pre b {
-  font-weight: normal;
-  color: #c61800;
-  text-shadow: #c61800 0 0 1px;
-}
-
 p {
   font-size: 1.5rem;
   margin: 1rem 0 0 0;
@@ -263,6 +243,10 @@ blockquote {
 }
 
 /* Content */
+img {
+  border: none;
+}
+
 header {
   font-weight: normal;
   left: 30px;
@@ -300,9 +284,6 @@ a:hover {
 pre {
   font-size: 1rem;
   padding: 10px 20px;
-  background: #0000001a;
-  border-radius: 8px;
-  border: 1px solid #00000033;
 }
 pre b, pre strong {
   font-weight: strong;
@@ -326,21 +307,65 @@ p.alt {
   top: 110vh;
 }
 
-.object object, .object .img {
-  height: 100%;
-  width: 100%;
+.mostflex,
+.twoimages {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.mostflex img,
+.twoimages img {
+  height: 24vh;
+  max-height: 200px;
+}
+.mostflex img[src*=both],
+.twoimages img[src*=both] {
+  height: 48vh;
+  max-height: 400px;
 }
 
-.objectlink {
+.twoimages {
+  height: calc(100vh - 6rem);
+  min-height: 80px;
+}
+
+.thought p {
+  padding: 25px;
+  margin: -50px 0 50px;
+}
+.thought p, .thought p::before, .thought p::after {
+  border-radius: 50%;
+  border: 5px solid var(--text);
+  background-color: var(--center);
+  position: relative;
+}
+.thought p::before, .thought p::after {
+  content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #7a8090;
-  color: #FFF;
-  padding: 5px 20px;
-  border-radius: 0 0 0 40px;
-  text-decoration: none;
-  font-size: 0.8rem;
+  left: 20%;
+  bottom: -30px;
+  height: 40px;
+  width: 40px;
+}
+.thought p::after {
+  left: 12%;
+  bottom: -50px;
+  height: 20px;
+  width: 20px;
+}
+
+.transport {
+  list-style-type: none;
+  text-align: center;
+  font-family: monospace;
+}
+.transport span {
+  font-size: 0.6em;
+}
+.transport li {
+  line-height: 0.8;
 }
 
 table {
