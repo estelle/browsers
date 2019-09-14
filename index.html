@@ -39,10 +39,13 @@ Based on: http://estelle.github.com/browsers
 
 
 
-<div class="slide">
+<div class="slide intro">
 <header>
   <h1>Performance web</h1>
 </header>
+<section class="content">
+  <p>performance web EST expérience utilisateurs</p>
+</section>
 </div>
 
 <div class="slide">
@@ -79,6 +82,15 @@ Based on: http://estelle.github.com/browsers
 
 
 <!-- browser -->
+<div class="slide intro">
+<header>
+  <h1>Le Navigateur</h1>
+</header>
+</div>
+
+
+
+<!-- browser -->
 <div class="slide" style="background-image: url(img/browser.png);">
 <header>
   <h1>Le Navigateur</h1>
@@ -91,7 +103,7 @@ Based on: http://estelle.github.com/browsers
 <!-- browser + server -->
 <div class="slide" style="background-image: url(img/browser.png)">
 <header>
-  <h1>Le Navigateur</h1>
+  <h1>Le Navigateur : ennemi #1</h1>
 </header>
 <section class="twoimages">
   <img src="img/timer.svg" alt="timer">
@@ -104,7 +116,7 @@ Based on: http://estelle.github.com/browsers
 <!-- browser + thread -->
 <div class="slide" style="background-image: url(img/browser.png), url(img/thread.png); background-size: auto 50%, auto 25%;">
 <header>
-  <h1>Le Navigateur</h1>
+  <h1>Le Navigateur : ennemie et amie</h1>
 </header>
 <p class="alt">image: fil</p>
 </div>
@@ -311,9 +323,11 @@ Based on: http://estelle.github.com/browsers
 </header>
 <section class="content">
     <div class="twoimages">
-    <img src="img/laptop.svg" alt="lap top computer"> 
-    <div>www.example.com →<br/>
-      ← 93.184.216.34 </div>
+    <img src="img/laptop.svg" alt="lap top computer">
+    <ul class="transport">
+      <li> →→→ <span>www.example.com</span> →→→<br/>
+        ←←← <span>93.184.216.34</span> ←←←</li>
+    </ul> 
     <img src="img/dns.svg" alt="server">
   </div>
 </section>
@@ -336,19 +350,22 @@ Based on: http://estelle.github.com/browsers
 </section>
 </div>
 
-<div class="slide">
+<div class="slide intro">
 <header>
-  <h1>TCP</h1>
+  <h1>Négociation TCP</h1>
 </header>
 <section class="content">
+  <p>négociation de liaison TCP à trois voies</p>
+  <p>TCP handshake</p>
 </section>
 </div>
 
 <div class="slide">
 <header>
-  <h1>TCP  </h1>
+  <h1>Négociation TCP</h1>
 </header>
 <section class="content">
+  <p>établissement d'une connexion</p>
     <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer"> 
     <ul class="transport">
@@ -367,7 +384,7 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
-  <h1>TCP  </h1>
+  <h1>Négociation TCP</h1>
 </header>
 <section class="content">
     <div class="twoimages">
@@ -415,9 +432,6 @@ Based on: http://estelle.github.com/browsers
 
 
 <div class="slide">
-<header>
-  <h1>TLS  </h1>
-</header>
 <section class="content">
     <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer"> 
@@ -446,10 +460,96 @@ Based on: http://estelle.github.com/browsers
 </div>
 
 
+<div class="slide">
+<section class="content">
+    <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer"> 
+    <ul class="transport">
+      <li> 
+        →→→ <span>URL</span> →→→<br/>
+        ←←← <span>IP</span> ←←←
+      </li>
+      <li>&nbsp;</li>
+      <li> 
+        →→→ <span>SYN</span> →→→<br/>
+        ←←← <span>SYN-ACK</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→
+      </li>
+      <li>&nbsp;</li>
+      <li> 
+        →→→ <span>ClientHello</span> →→→<br/>
+        ←←← <span>ServerHello &amp; Certificate</span> ←←←<br/> →→→ <span>ClientKey</span> →→→<br/>
+        ←←← <span>Finished</span> ←←←<br/>
+        →→→ <span>Finished</span> →→→
+      </li>
+      <li style="color: var(--center)"> 
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+    </ul>
+    <img src="img/bothservers.svg" alt="server">
+  </div>
+</section>
+</div>
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>La demande</h1>
+</header>
+<section class="content">
+    <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer"> 
+    <ul class="transport">
+      <li> 
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
+</section>
+</div>
+
+
+<div class="slide intro">
+<header>
+  <h1>La reponse</h1>
+</header>
+</div>
+
+<div class="slide">
+<header>
+  <h1>La reponse</h1>
+</header>
+<section class="content">
+    <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer"> 
+    <div>←←←</div>
+    <img src="img/webpage.svg" alt="HTML content"> 
+    <div>←←←</div>
+    <img src="img/server.svg" alt="server">
+  </div>
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>La reponse</h1>
+</header>
+<section class="content">
+    <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer"> 
+    <div>←←←</div>
+    <img src="img/webpagehalf.svg" alt="HTML web page cut in half" style="position: relative; top: -62px"> 
+    <div>←←←</div>
+    <img src="img/server.svg" alt="server">
+  </div>
+</section>
+</div>
+
+
+<div class="slide">
+<header>
+  <h1>TCP Slow Start</h1>
 </header>
 <section class="content">
 </section>
@@ -461,6 +561,37 @@ Based on: http://estelle.github.com/browsers
 </header>
 <section class="content">
 </section>
+</div>
+
+
+<div class="slide intro">
+<header>
+  <h1>La reponse</h1>
+</header>
+<section class="content">
+</section>
+</div>
+
+<div class="slide">
+  <pre>
+&lt;!doctype HTML&gt;
+&lt;html lang="fr-fr"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"/&gt;
+  &lt;title&gt;Mon site&lt;/title&gt;
+  &lt;link rel="stylesheet" src="styles.css"/&gt;
+  &lt;script src="myscript.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Ma Page&lt;/h1&gt;
+  &lt;p&gt;Un paragraph avec un &lt;a href="//example.com"&gt;lien&lt;/a&gt;&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;img src="monImage.jpg" alt="description de l'image"/&gt;
+    &lt;caption&gt;Ma photo&lt;/caption&gt;
+  &lt;/figure&gt;
+  &lt;script src="anotherscript.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 </div>
 
 <div class="slide">
@@ -480,10 +611,63 @@ Based on: http://estelle.github.com/browsers
 </header>
 </div>
 
+
+<div class="slide">
+<header>
+  <h1>DOM</h1>
+</header>
+<section class="content">
+  <img src="img/dom.svg">
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>CSSOM</h1>
+</header>
+<section class="content">
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>AOM</h1>
+</header>
+<section class="content">
+</section>
+</div>
+
+
 <div class="slide intro">
 <header>
   <h1>Le rendu</h1>
 </header>
+</div>
+
+
+
+<div class="slide">
+<header>
+  <h1></h1>
+</header>
+<section class="content">
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1></h1>
+</header>
+<section class="content">
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1></h1>
+</header>
+<section class="content">
+</section>
 </div>
 
 

@@ -4,9 +4,13 @@ img {
 }
 header {
   font-weight: normal;
-  left: 30px;
-  top: 25px;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 0 1em;
+}
+.intro h1 {
+  font-size: 2.5rem;
+  text-decoration: underline 1px dotted;
+  text-underline-offset: 0.2em;
 }
 h2 {
   font-size: 1.8rem;

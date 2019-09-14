@@ -59,11 +59,6 @@
   text-align: center;
   font-size: 2rem;
 }
-
-.slide.intro hgroup {
-  margin-top: 200px;
-}
-
 .slide textarea.mynotes {
   -webkit-appearance: none;
   border: 1px #aaa solid;
@@ -75,26 +70,13 @@
   padding: 5px;
   box-sizing: border-box;
 }
-
-td,
-th {
-  border: 1px solid #ccc;
-  text-align: center;
+.slide ol, .slide ul {
+  margin-left: 1em;
 }
-
-.invalid {
-  background-color: red;
-}
-
-.slide.section {
-  text-align: center;
-}
-
 .slide li {
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
-
 .slide p {
   font-size: 1.5rem;
   margin: 1rem 0 0 0;
@@ -115,13 +97,6 @@ body .slide {
 .slide.bigbg .alt {
   color: rgba(0, 0, 0, 0.1);
   font-size: 1px;
-}
-
-.photocredit {
-  color: #ccc;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
 }
 
 :root {
@@ -249,9 +224,14 @@ img {
 
 header {
   font-weight: normal;
-  left: 30px;
-  top: 25px;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 0 1em;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  text-decoration: underline 1px dotted;
+  text-underline-offset: 0.2em;
 }
 
 h2 {
