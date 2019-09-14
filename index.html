@@ -400,18 +400,19 @@ Based on: http://estelle.github.com/browsers
 </section>
 </div>
 
-<div class="slide">
+<div class="slide intro">
 <header>
-  <h1>TLS</h1>
+  <h1> Negotiation TLS</h1>
 </header>
 <section class="content">
+  <p>Détermine le chiffrement pour la communication</p>
 </section>
 </div>
 
 
 <div class="slide">
 <header>
-  <h1>TLS  </h1>
+  <h1>Negotiation TLS</h1>
 </header>
 <section class="content">
     <div class="twoimages">
@@ -516,6 +517,27 @@ Based on: http://estelle.github.com/browsers
 </header>
 </div>
 
+
+<div class="slide">
+<header>
+  <h1>Le chemin...</h1>
+</header>
+<section class="content">
+  <p>Navigation</p>
+  <ol>
+    <li>DNS</li>
+    <li>TCP</li>
+    <li>TLS</li>
+    <li>Request</li>
+  </ol>
+  <p>La Reponse</p>
+  <ol>
+    <li>...</li>
+  </ol> 
+</section>
+</div>
+
+
 <div class="slide">
 <header>
   <h1>La reponse</h1>
@@ -552,25 +574,134 @@ Based on: http://estelle.github.com/browsers
   <h1>TCP Slow Start</h1>
 </header>
 <section class="content">
+  <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer">
+    <ul class="transport"> 
+      <li> 
+        ←←← <span>14kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        ←←← <span>28kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        ←←← <span>56kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        ←←← <span>112kb</span> ←←←<br/></li>
+      <li> . . .
+      </li>
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
 </section>
 </div>
+
+
+
+
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>TCP Slow Start</h1>
 </header>
 <section class="content">
+  <p>Algorithme pour détecter la bande passante disponible</p>
+  <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer">
+    <ul class="transport"> 
+      <li>  ⇔ <span>DNS</span> ⇔ <li>
+      <li>  ⇔ <span>SYN-SYN-ACK</span> ⇔ <li>
+      <li>  ⇔ <span>TLS</span> ⇔ <li>
+      <li> 
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+      <li> 
+        ←←← <span>14kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        ←←← <span>28kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        ←←← <span>56kb</span> ←←←<br/>
+        →→→ <span>ACK</span> →→→<br/>
+        . . .
+      </li>
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
 </section>
 </div>
 
 
-<div class="slide intro">
+
+
+
+<div class="slide">
 <header>
-  <h1>La reponse</h1>
+  <h1>Congestion control</h1>
 </header>
 <section class="content">
+  <p>Confirme la livraison en renvoyant ACK, les accusés de réception</p>
+  <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer">
+    <ul class="transport"> 
+      <li>  ⇔ <span>DNS</span> ⇔ <li>
+      <li>  ⇔ <span>SYN-SYN-ACK</span> ⇔ <li>
+      <li>  ⇔ <span>TLS</span> ⇔ <li>
+      <li> 
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+      <li> 
+        ←←← <span>14kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        ←←← <span>28kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        ←←← <span>56kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        . . .
+      </li>
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
 </section>
 </div>
+
+
+
+
+<div class="slide">
+<header>
+  <h1>Congestion control</h1>
+</header>
+<section class="content">
+  <p>Confirme la livraison en renvoyant ACK, les accusés de réception</p>
+  <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer">
+    <ul class="transport"> 
+      <li> 
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+      <li> 
+        ←←← <span>14kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        ←←← <span>28kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        ←←← <span>56kb</span> ←←←<br/>
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
+        
+        ←←← <span>112kb</span> ←←←<br/>
+        . . .
+      </li>
+      <li>
+        ←←← <span>56kb</span> ←←←<br/>
+        . . .
+      </li>
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
+</section>
+</div>
+
+
+
+
+
+
 
 <div class="slide">
   <pre>
@@ -594,15 +725,6 @@ Based on: http://estelle.github.com/browsers
 &lt;/html&gt;</pre>
 </div>
 
-<div class="slide">
-<header>
-  <h1></h1>
-</header>
-<section class="content">
-</section>
-</div>
-
-
 
 
 <div class="slide intro">
@@ -614,12 +736,44 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
+  <h1>L'analyse</h1>
+</header>
+<section class="content">
+  <ul>
+    <li>Commence immediatement (14kb)</li>
+    <li>Main thread</li>
+    <li>chemin de rendu critique = 5 etapes</li>
+  </ul>
+</section>
+</div>
+
+
+
+
+
+<div class="slide">
+<header>
   <h1>DOM</h1>
 </header>
 <section class="content">
   <img src="img/dom.svg">
 </section>
 </div>
+
+
+<div class="slide">
+<header>
+  <h1>Scanner de préchargement</h1>
+</header>
+<section class="content">
+  <p>Demande les ressources hautement prioritaires</p>
+  <pre>&lt;link rel="stylesheet" src="styles.css"/>
+&lt;script src="myscript.js" <strong>async</strong>>&lt;/script>
+&lt;img src="monImage.jpg" alt="description de l'image"/>
+&lt;script src="unautrescript.js" <strong>async</strong>>&lt;/script></pre>
+</section>
+</div>
+
 
 <div class="slide">
 <header>
