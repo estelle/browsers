@@ -52,13 +52,13 @@
 		<path d="M225 355h100v50H225v-49z"  class="subnode"/>
 		<text x="240" y="375">rel="...</text>
 		<text x="240" y="395">href="...</text>
+		<text x="340" y="385">render &amp; JS blocking</text>
 	<path d="M105 420h100v50H105v-49z" />
 	<text x="120" y="450">SCRIPT</text>
 		<path d="M225 420h100v50H225v-49z"  class="subnode"/>
-		<text x="240" y="440">src="...</text>
-		<text x="240" y="460">async</text>
+		<text x="240" y="450">src="...</text>
+		<text x="340" y="450">BLOCKING!</text>
 	<g class="lines">
-		<path d="M366 135l-50-40"/>
 		<path d="M166 135l50-40"/>
 		<path d="M400 70H425"/>
 
@@ -74,48 +74,5 @@
 	</g>
 </g>
 
-<g id="body">
-	<path d="M345 135h200v50H345v-49z" class="heading"/>
-	<text x="370" y="165">BODY</text>
-	<path d="M385 220h200v50H385v-49z" />
-	<text x="410" y="250">H1</text>
-	<path d="M605 220h200v50H605v-49z" class="subnode" />
-	<text x="630" y="250">class="heading"</text>
-	<path d="M385 288h200v50H385v-49z" />
-	<text x="410" y="318">P</text>
-	<path d="M470 355h200v50H470v-49z"  class="subnode" />
-	<text x="495" y="383">Un paragraphe ...</text>
-	<path d="M470 420h200v50H470v-49z" />
-	<text x="495" y="450">A</text>
-	<path d="M690 420h200v50H690v-49z"  class="subnode"  />
-	<text x="715" y="450">href="htt..."</text>
-	<path d="M385 490h200v50H385v-49z" />
-	<text x="410" y="520">DIV</text>
-	<path d="M470 560h200v50H470v-49z" />
-	<text x="495" y="590">IMG</text>
-	<path d="M690 560h200v50H690v-49z"  class="subnode"  />
-	<text x="695" y="580">src="htt..."</text>
-	<text x="695" y="600">alt="desc..."</text>
-	<path d="M385 630h200v50H385v-49z" />
-	<text x="410" y="660">SCRIPT</text>
-	<path d="M605 630h200v50H605v-49z" class="subnode" />
-	<text x="630" y="650">src="/js/..."</text>
-	<text x="630" y="670">async</text>
-	<g class="lines">
-		<path d="M362 660l-0-474"/>
-		<path d="M362 244H385"/>
-			<path d="M582 244H605"/>
-		<path d="M362 314H385"/>
-			<path d="M405 450l-0-140"/>
-				<path d="M405 384H470"/>
-				<path d="M405 450H470"/>
-					<path d="M690 450H650" />
-		<path d="M362 520H385"/>
-			<path d="M405 590l-0-70"/>
-				<path d="M405 590H470"/>
-					<path d="M690 590H650" />
-		<path d="M362 660H385"/>
-			<path d="M582 660H605"/>
-	</g>
-</g>
+
 	</svg>

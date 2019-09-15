@@ -5,7 +5,7 @@ img {
 header {
   font-weight: normal;
   font-size: 1.8rem;
-  margin: 0 1em;
+  margin: 0 0.5em;
 }
 .intro h1 {
   font-size: 2.5rem;
@@ -112,4 +112,13 @@ p.alt {position: absolute; top: 110vh;}
   li {
     line-height: 0.8;
   }
+}
+p.notes {
+  font-family: helvetica neue, helvetica, sans serif;
+  opacity: 0.2;
+  font-size: 16px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 40vw;
 }

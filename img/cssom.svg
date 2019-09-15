@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="940" height="740">
+	<title>CSSOM Tree</title>
+	<style>
+	text {
+		stroke: orange;
+		fill: orange;
+		opacity: 1;
+		font-size: 20px
+	}
+	.heading + text,
+	.subnode + text,
+	.subnode + text + text {
+		stroke: white;
+		fill: white;
+	}
+	[d] {
+		stroke-width: 2px;
+		stroke: orange;
+		fill: white;
+	}
+	.lines [d] {
+		stroke: white;
+	}
+	.heading {
+		fill: orange;
+		stroke: white;
+	}
+	.empty {
+		stroke: white;
+	}
+	.subnode {
+		fill: none;
+		stroke: white;
+	}
+	</style>
+
+	<path d="M5 45h200v50H5v-49z" />
+	<text x="35" y="75">HTML</text>
+	<path d="M225 45h200v50H225v-49z" class="subnode" />
+	<text x="235" y="75">font-size: 16px</text>
+
+<g id="body">
+	<path d="M45 135h200v50H45v-49z" class="heading"/>
+		<text x="70" y="165">BODY</text>
+	<path d="M265 135h200v50H265v-49z" class="subnode" />
+		<text x="270" y="155">(UA) margin: 8px;</text>
+		<text x="270" y="175">color: #333333;</text>
+	<path d="M85 220h200v50H85v-49z" />
+		<text x="110" y="250">H1</text>
+	<path d="M305 220h200v50H305v-49z" class="subnode" />
+		<text x="310" y="240" style="opacity: 0.5">font-size: 16px</text>
+		<text x="310" y="260">font-size: 32px</text>
+	<path d="M85 288h200v50H85v-49z" />
+		<text x="110" y="318">P</text>
+	<path d="M170 355h200v50H170v-49z" />
+		<text x="195" y="383">A</text>
+	<path d="M390 355h240v50H390v-49z"  class="subnode"  />
+		<text x="395" y="373" style="opacity: 0.5">(UA) color: rgb(0, 0, 238);</text>
+		<text x="395" y="393">color: blue</text>
+	<path d="M85 420h200v50H85v-49z" />
+		<text x="110" y="450">DIV</text>
+	<path d="M170 490h200v50H170v-49z" />
+		<text x="195" y="520">[alt]</text>
+	<path d="M390 490h200v80H390v-49z"  class="subnode"  />
+		<text x="395" y="510">border: none;</text><text x="395" y="520"></text>
+		<text x="395" y="540">width: 100%;</text>
+    	<text x="395" y="560">height: auto;</text>
+	<g class="lines">
+		<path d="M200 75H225" />
+
+		<path d="M20 165H45"/>
+			<path d="M245 165H265"/>
+
+		<path d="M85 244H70"/>
+			<path d="M305 250H280"/>
+
+		<path d="M85 314H70"/>
+		<path d="M175 384H140"/>
+			<path d="M390 384H340"/>
+		<path d="M85 444H70"/>
+		<path d="M175 514H140"/>
+			<path d="M390 514H340"/>
+
+
+		<path d="M20 165l-0-68"/>
+		<path d="M70 445l-0-260"/>
+		<path d="M140 383l-0-50"/>
+		<path d="M140 513l-0-50"/>
+	</g>
+</g>
+	</svg>

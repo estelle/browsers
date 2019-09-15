@@ -19,6 +19,16 @@ Based on: http://estelle.github.com/browsers
     color: white;
     background-color: black;
   }
+  .ttfb {
+    position: relative;
+  }
+  .ttfb::after {
+    position: absolute;
+    content: '(TTFB)';
+    color: orange;
+    bottom: -5px;
+    font-size: small;
+  }
 </style>
 <link rel="stylesheet" href="css/index.css" class="removeForAT">
 </head>
@@ -29,7 +39,7 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide intro">
 <header>
-  <h1>Navigateur : les coulisses du chargement</h1>
+  <h1 style="text-decoration: none;">Navigateur : les coulisses du chargement</h1>
 </header>
 <section class="content">
   <button id="killCSS" class="skiplink">Remove stylesheet to make accessible</button>
@@ -105,9 +115,12 @@ Based on: http://estelle.github.com/browsers
 <header>
   <h1>Le Navigateur : ennemi #1</h1>
 </header>
-<section class="twoimages">
-  <img src="img/timer.svg" alt="timer">
-  <img src="img/server.svg" alt="server">
+<section>
+  <div class="twoimages">
+    <img src="img/timer.svg" alt="timer">
+    <img src="img/server.svg" alt="server">
+  </div>
+  <p class="notes">le temps nécessaire pour obtenir toutes les ressources de tous les serveurs</p>
 </section>
 </div>
 
@@ -119,6 +132,7 @@ Based on: http://estelle.github.com/browsers
   <h1>Le Navigateur : ennemie et amie</h1>
 </header>
 <p class="alt">image: fil</p>
+<p class="notes"></p>
 </div>
 
 
@@ -129,6 +143,7 @@ Based on: http://estelle.github.com/browsers
   <h1>Les réseaux mobiles</h1>
 </header>
 <section class="content">
+  <p class="notes">Le délai le plus long est le temps nécessaire pour que le téléphone se rende à la tour de téléphonie cellulaire et que la tour de téléphonie cellulaire revienne au téléphone. L'air est la cause de la plus grande latence</p>
 </section>
 </div> 
 
@@ -142,6 +157,8 @@ Based on: http://estelle.github.com/browsers
   <h1>Les pouvoir mobiles</h1>
 </header>
 <section class="content">
+  <p class="notes">Les navigateurs mobiles sont super puissants.
+Les appareils mobiles ne sont pas</p>
 </section>
 </div> 
 
@@ -215,9 +232,10 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
-  <h1>Les coulisses du chargement</h1>
+  <h1>Performance Web</h1>
 </header>
 <section class="content">
+  <p>Les coulisses du chargement</p>
   <ol class="bulleted">
     <li class="temphidden">La navigation</li>
     <li class="temphidden">La reponse</li>
@@ -260,9 +278,9 @@ Based on: http://estelle.github.com/browsers
 <section>
   <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer"> 
-    <div>⇐<br/>⇐<br/>⇐</div>
-    <img src="img/webpage.svg" alt="lap top computer"> 
-    <div>⇐<br/>⇐<br/>⇐</div>
+    <div>←←←</div>
+    <img src="img/webpage.svg" alt="HTML content"> 
+    <div>←←←</div>
     <img src="img/server.svg" alt="server">
   </div>
   <p style="position: relative; top: -2em">Ce n'est pas si simple...</p>
@@ -374,10 +392,10 @@ Based on: http://estelle.github.com/browsers
         ←←← <span>SYN-ACK</span> ←←←<br/>
         →→→ <span>ACK</span> →→→
       </li>
-
     </ul>
     <img src="img/server.svg" alt="server">
   </div>
+  <p class="notes">L'hôte, généralement le navigateur, envoie un paquet TCP SYNchronize au serveur. Le serveur reçoit le SYN et renvoie un accusé de réception SYNchronize. L'hôte reçoit le SYN-ACK du serveur et envoie un acquittement. Le serveur reçoit ACK et la connexion de socket TCP est établie.
 </section>
 </div>
 
@@ -517,7 +535,7 @@ Based on: http://estelle.github.com/browsers
 </header>
 </div>
 
-
+<!--
 <div class="slide">
 <header>
   <h1>Le chemin...</h1>
@@ -535,7 +553,7 @@ Based on: http://estelle.github.com/browsers
     <li>...</li>
   </ol> 
 </section>
-</div>
+</div> -->
 
 
 <div class="slide">
@@ -543,13 +561,14 @@ Based on: http://estelle.github.com/browsers
   <h1>La reponse</h1>
 </header>
 <section class="content">
-    <div class="twoimages">
+  <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer"> 
     <div>←←←</div>
     <img src="img/webpage.svg" alt="HTML content"> 
     <div>←←←</div>
     <img src="img/server.svg" alt="server">
   </div>
+  <p style="position: relative; top: -2em">Ce n'est pas si simple...</p>
 </section>
 </div>
 
@@ -574,11 +593,19 @@ Based on: http://estelle.github.com/browsers
   <h1>TCP Slow Start</h1>
 </header>
 <section class="content">
+
+  <p>Algorithme pour détecter la bande passante disponible</p>
   <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer">
     <ul class="transport"> 
+      <li>  ⇔ <span>DNS</span> ⇔ <li>
+      <li>  ⇔ <span>SYN-SYN-ACK</span> ⇔ <li>
+      <li>  ⇔ <span>TLS</span> ⇔ <li>
       <li> 
-        ←←← <span>14kb</span> ←←←<br/>
+        →→→ <span>HTTP-GET-REQUEST</span> →→→
+      </li>
+      <li> 
+        ←←← <span class="ttfb">14kb</span> ←←←<br/>
         →→→ <span>ACK</span> →→→<br/>
         ←←← <span>28kb</span> ←←←<br/>
         →→→ <span>ACK</span> →→→<br/>
@@ -593,39 +620,6 @@ Based on: http://estelle.github.com/browsers
 </section>
 </div>
 
-
-
-
-
-<div class="slide">
-<header>
-  <h1>TCP Slow Start</h1>
-</header>
-<section class="content">
-  <p>Algorithme pour détecter la bande passante disponible</p>
-  <div class="twoimages">
-    <img src="img/laptop.svg" alt="lap top computer">
-    <ul class="transport"> 
-      <li>  ⇔ <span>DNS</span> ⇔ <li>
-      <li>  ⇔ <span>SYN-SYN-ACK</span> ⇔ <li>
-      <li>  ⇔ <span>TLS</span> ⇔ <li>
-      <li> 
-        →→→ <span>HTTP-GET-REQUEST</span> →→→
-      </li>
-      <li> 
-        ←←← <span>14kb</span> ←←←<br/>
-        →→→ <span>ACK</span> →→→<br/>
-        ←←← <span>28kb</span> ←←←<br/>
-        →→→ <span>ACK</span> →→→<br/>
-        ←←← <span>56kb</span> ←←←<br/>
-        →→→ <span>ACK</span> →→→<br/>
-        . . .
-      </li>
-    </ul>
-    <img src="img/server.svg" alt="server">
-  </div>
-</section>
-</div>
 
 
 
@@ -689,7 +683,7 @@ Based on: http://estelle.github.com/browsers
       </li>
       <li>
         ←←← <span>56kb</span> ←←←<br/>
-        . . .
+        →→→ <span style="color: var(--center)">ACK</span> →→→<br/> . . .
       </li>
     </ul>
     <img src="img/server.svg" alt="server">
@@ -702,9 +696,11 @@ Based on: http://estelle.github.com/browsers
 
 
 
-
 <div class="slide">
-  <pre>
+<header>
+  <h1>Reponse</h1>
+</header>
+<section class="content">  <pre>
 &lt;!doctype HTML&gt;
 &lt;html lang="fr-fr"&gt;
  &lt;head&gt;
@@ -723,9 +719,9 @@ Based on: http://estelle.github.com/browsers
   &lt;script src="anotherscript.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
+  <img src="img/nodes.svg" class="temphidden" style="position: absolute; right: 0; top: 0">
+</section>
 </div>
-
-
 
 <div class="slide intro">
 <header>
@@ -742,6 +738,7 @@ Based on: http://estelle.github.com/browsers
   <ul>
     <li>Commence immediatement (14kb)</li>
     <li>Main thread</li>
+    <li>Scanner de préchargement</li>
     <li>chemin de rendu critique = 5 etapes</li>
   </ul>
 </section>
@@ -756,7 +753,7 @@ Based on: http://estelle.github.com/browsers
   <h1>DOM</h1>
 </header>
 <section class="content">
-  <img src="img/dom.svg" style="transform: translateY(-40px);">
+  <img src="img/blockeddom.svg" style="transform: translateY(-40px);">
 </section>
 </div>
 
@@ -770,7 +767,27 @@ Based on: http://estelle.github.com/browsers
   <pre>&lt;link rel="stylesheet" src="styles.css"/>
 &lt;script src="myscript.js" <strong>async</strong>>&lt;/script>
 &lt;img src="monImage.jpg" alt="description de l'image"/>
-&lt;script src="unautrescript.js" <strong>async</strong>>&lt;/script></pre>
+&lt;script src="unautrescript.js" <strong>defer</strong>>&lt;/script></pre>
+</section>
+</div>
+
+
+<div class="slide">
+<header>
+  <h1>JavaScript</h1>
+</header>
+<section class="content">
+  <img src="img/async.png" alt="difference between async and defer">
+</section>
+</div>
+
+
+<div class="slide">
+<header>
+  <h1>DOM</h1>
+</header>
+<section class="content">
+  <img src="img/dom.svg" style="transform: translateY(-40px);">
 </section>
 </div>
 
@@ -780,17 +797,52 @@ Based on: http://estelle.github.com/browsers
   <h1>CSSOM</h1>
 </header>
 <section class="content">
+
+  <img src="img/cssom.svg" style="transform: translateY(-40px); float: right">
+
+<pre>:root {
+  font-size: 16px;
+}
+body {
+  color: #333333;
+}
+h1 {
+  font-size: 2rem;
+}
+p a {
+  color: blue;
+}
+div [alt] {
+  border: none;
+}</pre>
 </section>
 </div>
 
-<div class="slide">
+<div class="slide" style="background-image: url(img/aom.png); background-size: cover; background-position: top left;">
 <header>
   <h1>AOM</h1>
 </header>
 <section class="content">
+<p class="alt">image: screen shot of accessiblity tab showing accessiblity names</p>
+<p class="notes" style="color: black;">Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux lecteurs d'écran.</p>
 </section>
 </div>
 
+
+<div class="slide">
+<header>
+  <h1>Compilation JavaScript</h1>
+</header>
+<section class="content">
+  <ol>
+    <li>interprété</li>
+    <li>compilé </li>
+    <li>analysé</li> 
+    <li>exécuté</li>
+  </ol>
+  <p class="notes">Analysés dans des arbres à syntaxe abstraite, générant code binaire exécuté sur le thread principal.</p>
+</section>
+</div>
 
 <div class="slide intro">
 <header>
@@ -802,7 +854,7 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>Style</h1>
 </header>
 <section class="content">
 </section>
@@ -810,7 +862,7 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>Layout</h1>
 </header>
 <section class="content">
 </section>
@@ -818,12 +870,19 @@ Based on: http://estelle.github.com/browsers
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>Paint</h1>
 </header>
 <section class="content">
 </section>
 </div>
 
+<div class="slide">
+<header>
+  <h1>Composting</h1>
+</header>
+<section class="content">
+</section>
+</div>
 
 <div class="slide intro">
 <header>
