@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1250" height="500">
+	<title>Render Tree</title>
+	<style>
+	text {
+		stroke: orange;
+		fill: orange;
+		opacity: 1;
+		font-size: 20px
+	}
+	text.arrow.arrow {
+		font-size: 50px;
+		stroke: orange;
+		fill: orange;
+
+	}
+	.heading + text,
+	.subnode + text,
+	.subnode + text + text,
+	.subnode + text + text + text {
+		stroke: white;
+		fill: white;
+	}
+	[d] {
+		stroke-width: 2px;
+		stroke: orange;
+		fill: white;
+	}
+	.lines [d] {
+		stroke: white;
+	}
+	.heading {
+		fill: orange;
+		stroke: white;
+	}
+	.empty {
+		stroke: white;
+	}
+	.subnode {
+		fill: none;
+		stroke: white;
+	}
+	</style>
+
+	<path d="M0 0h200v100H0v-100z" class="subnode" />
+	<text x="25" y="55">HTML, SVG</text>
+	  <text x="210" y="65" class="arrow">➜</text>
+		<path d="M250 0h200v100H250v-100z" />
+		<text x="300" y="55">DOM Tree</text>
+
+	<path d="M0 150h200v100H0v-100z"  class="subnode"/>
+	<text x="25" y="175">UA stylesheet</text>
+	<text x="25" y="205">User stylesheet</text>
+	<text x="25" y="235">style=""</text>
+	  <text x="210" y="215" class="arrow">➜</text>
+		<path d="M250 150h200v100H250v-100z" />
+		<text x="300" y="205">CSS OM Tree</text>
+
+
+	<text x="450" y="65" class="arrow">↘︎</text>
+	<text x="450" y="205" class="arrow">↗︎</text>
+
+	<path d="M500 75h200v100H500v-100z" />
+	<text x="550" y="130">Render Tree</text>
+
+	<path d="M500 225h200v100H500v-100z" class="subnode" />
+	<text x="520" y="275">Browser conditions</text>
+	<text x="590" y="215" class="arrow">↑</text>
+
+
+	<path d="M750 75h200v100H750v-100z" />
+	<text x="800" y="130">Layout</text>
+	  <text x="705" y="140" class="arrow">➜</text>
+
+
+	<path d="M1000 75h200v100H1000v-100z" />
+	<text x="1050" y="130">Paint</text>
+	  <text x="955" y="140" class="arrow">➜</text>
+	</svg>

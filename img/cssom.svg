@@ -58,9 +58,9 @@
 		<text x="395" y="373" style="opacity: 0.5">(UA) color: rgb(0, 0, 238);</text>
 		<text x="395" y="393">color: blue</text>
 	<path d="M85 420h200v50H85v-49z" />
-		<text x="110" y="450">DIV</text>
+		<text x="110" y="450">FIGURE</text>
 	<path d="M170 490h200v50H170v-49z" />
-		<text x="195" y="520">[alt]</text>
+		<text x="195" y="520">img</text>
 	<path d="M390 490h200v80H390v-49z"  class="subnode"  />
 		<text x="395" y="510">border: none;</text><text x="395" y="520"></text>
 		<text x="395" y="540">width: 100%;</text>

@@ -90,7 +90,7 @@
 	<path d="M690 420h200v50H690v-49z"  class="subnode"  />
 	<text x="715" y="450">href="htt..."</text>
 	<path d="M385 490h200v50H385v-49z" />
-	<text x="410" y="520">DIV</text>
+	<text x="410" y="520">FIGURE</text>
 	<path d="M470 560h200v50H470v-49z" />
 	<text x="495" y="590">IMG</text>
 	<path d="M690 560h200v50H690v-49z"  class="subnode"  />

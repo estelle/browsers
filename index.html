@@ -710,7 +710,7 @@ Les appareils mobiles ne sont pas</p>
   &lt;script src="myscript.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;h1&gt;Ma Page&lt;/h1&gt;
+  &lt;h1&gt;Ma Page<span style="color: var(--center);">&lt;/h1&gt;</span>
   &lt;p&gt;Un paragraph avec un &lt;a href="//example.com"&gt;lien&lt;/a&gt;&lt;/p&gt;
   &lt;figure&gt;
     &lt;img src="monImage.jpg" alt="description de l'image"/&gt;
@@ -787,7 +787,7 @@ Les appareils mobiles ne sont pas</p>
   <h1>DOM</h1>
 </header>
 <section class="content">
-  <img src="img/dom.svg" style="transform: translateY(-40px);">
+  <img src="img/dom.svg" style="transform: translateY(-40px);" alt="DOM tree">
 </section>
 </div>
 
@@ -798,7 +798,7 @@ Les appareils mobiles ne sont pas</p>
 </header>
 <section class="content">
 
-  <img src="img/cssom.svg" style="transform: translateY(-40px); float: right">
+  <img src="img/cssom.svg" style="transform: translateY(-40px); float: right" alt="CSSOM">
 
 <pre>:root {
   font-size: 16px;
@@ -812,7 +812,7 @@ h1 {
 p a {
   color: blue;
 }
-div [alt] {
+figure img {
   border: none;
 }</pre>
 </section>
@@ -829,20 +829,27 @@ div [alt] {
 </div>
 
 
-<div class="slide">
+<div class="slide" style="background-image: url(img/astexplorer.png); background-size: contain; background-position: top right; background-color: white">
 <header>
-  <h1>Compilation JavaScript</h1>
+  <h1 style="margin-top: 30vh; color: orange">Compilation JavaScript</h1>
 </header>
 <section class="content">
-  <ol>
-    <li>interprété</li>
-    <li>compilé </li>
-    <li>analysé</li> 
-    <li>exécuté</li>
+  <ol style="color: orange">
+    <li style="color: orange">interprété</li>
+    <li style="color: orange">compilé <sup>*</sup></li>
+    <li style="color: orange">analysé</li> 
+    <li style="color: orange">exécuté <sup>**</sup></li>
   </ol>
-  <p class="notes">Analysés dans des arbres à syntaxe abstraite, générant code binaire exécuté sur le thread principal.</p>
+  <p  style="color: orange; font-size: small;"><sup>*</sup>Analysés dans des arbres à syntaxe abstraite, générant code optimize et/ou binaire exécuté sur le thread principal.</p>
+
+  <p  style="color: orange; font-size: small;"><sup>**</sup>Générera une erreur si JavaScript est exécute sur un nœud DOM qui n'a pas encore été rencontré</p>
+  <p class="alt">Screen shot of a simple javascript event handler in ASTExplorer.net</p>
 </section>
 </div>
+
+
+
+
 
 <div class="slide intro">
 <header>
@@ -850,6 +857,28 @@ div [alt] {
 </header>
 </div>
 
+<div class="slide">
+<header>
+  <h1>Le rendu</h1>
+</header>
+<section class="content">
+  <ol>
+    <li>Style</li>
+    <li>Layout</li>
+    <li>Paint</li>
+    <li>Compositing</li>
+  </ol>
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>Le rendu</h1>
+</header>
+<section class="content">
+  <img src="img/rendertree.svg" alt="render process">
+</section>
+</div>
 
 
 <div class="slide">

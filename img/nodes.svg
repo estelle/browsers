@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="640">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="680">
 	<title>DOM Tree</title>
 	<style>text {
 		opacity:1;
@@ -10,28 +10,30 @@
 	<path d="M140 132l75-38" fill-opacity="0" stroke="#fff" id="b1oo3Sc4me"/>
 	<path d="M366 132l-50-38" id="a5TAWfcyIw"/>
 	<path d="M71 446l-4-264" id="bf98XDLSO"/>
-	<path d="M344 285h176v49H344v-49z" id="aEapgGQ6o"/>
-	<path d="M344 446h-20" id="d2CgEvHTI"/>
-	<path d="M344 314l-20-1" id="dgVFTz5K"/>
-	<path d="M344 244h-20" id="b8tex7Sdl"/>
 	<path d="M113 442H70" id="g2yvSwGFWh"/>
 	<path d="M113 374H70" id="f3nHLD3Fa"/>
 	<path d="M113 310l-43 .5" id="b5wE2pc2O"/>
 	<path d="M113 244H70" id="gnnheqLqw"/>
-	<path d="M53 132h174v50H53v-50z" id="b8L4ghwkWd"/>
 	<path d="M433 374h-34v-40" id="bidZTKqAz"/>
 	<path d="M182 46h174v49H182V46z" id="ajFvX9qd3"/>
-	<path d="M433 502.7h-34V468" id="bk5cM0za"/>
+	<path d="M433 562.7h-34V468" id="bk5cM0za"/>
+	<path d="M344 446h-20" id="d2CgEvHTI"/>
+	<path d="M344 314l-20-1" id="dgVFTz5K"/>
+	<path d="M344 244h-20" id="b8tex7Sdl"/>
+	<path d="M344 623h-20V185" id="aakYba2j"/>
+
+	<path d="M344 285h176v49H344v-49z" id="aEapgGQ6o"/>
+	<path d="M53 132h174v50H53v-50z" id="b8L4ghwkWd"/>
 	<path d="M319 132h174v50H319v-50z" id="c6cAb86x2Z"/>
 	<path d="M113 219h175v49H114l-1-49z" id="c1vCfxhrtY"/>
 	<path d="M113 285h174v49H113v-49z" id="b4BMhvswEW"/>
 	<path d="M113 354h174v49H113v-49z" id="aiQZvu0nA"/>
 	<path d="M113 417h175v49H114l-1-49z" id="e3Z8WdelU9"/>
-	<path d="M344 563h-20V185" id="aakYba2j"/>
 	<path d="M344 219h176v49H345v-49z" id="h2h63vixMX"/>
 	<path d="M344 417h174v49H344v-49z" id="a4Lg6bC9RC"/>
-	<path d="M344 542h174v49H344v-49z" id="b4aYsbS94F"/>
+	<path d="M344 612h174v49H344v-49z" id="b4aYsbS94F"/>
 	<path d="M424 477h174v49H424v-49z" id="apnyFohGg"/>
+	<path d="M424 537h174v49H424v-49z" id="apny"/>
 	<path d="M424 354h174v49H424v-49z" id="dJjwsM2Y1"/>
 
 	<text id="a222qMfbC9" x="235" y="75">html</text>
@@ -44,9 +46,10 @@
 	<text id="c4tZrj9IIe" x="370" y="250">h1</text>
 	<text id="a39PTXvYKb" x="370" y="318">p</text>
 	<text id="ckAYmpAGl" x="455" y="385">a</text>
-	<text id="b6PSiPn6jP" x="379" y="450">div</text>
+	<text id="b6PSiPn6jP" x="379" y="450">figure</text>
 	<text id="e2AxLYL0n" x="455" y="510">img</text>
-	<text id="j2jIMjtP9o" x="370" y="570">script</text>
+	<text id="e2A" x="455" y="570">caption</text>
+	<text id="j2jIMjtP9o" x="370" y="640">script</text>
 	</defs>
 
 	<use xlink:href="#bfw2jxK4o" fill="#1cd605" id="b3Huy3yL6l"/>
@@ -77,6 +80,7 @@
 	<use xlink:href="#dJjwsM2Y1" fill="white"/>
 	<use xlink:href="#a4Lg6bC9RC" fill="white"/>
 	<use xlink:href="#apnyFohGg" fill="white"/>
+	<use xlink:href="#apny" fill="white"/>
 	<use xlink:href="#b4aYsbS94F" fill="white"/>
 	<use xlink:href="#g4tC3sH5MX" fill="orange"/>
 	<use xlink:href="#faMokt4ml" fill="orange"/>
@@ -90,5 +94,7 @@
 	<use xlink:href="#ckAYmpAGl" fill="orange"/>
 	<use xlink:href="#b6PSiPn6jP" fill="orange"/>
 	<use xlink:href="#e2AxLYL0n" fill="orange"/>
+	<use xlink:href="#e2A" fill="orange"/>
 	<use xlink:href="#j2jIMjtP9o" fill="orange"/>
+	<path d="M424 505H400" stroke="#fff"/>
 	</svg>
