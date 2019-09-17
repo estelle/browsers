@@ -2,6 +2,7 @@
 <html lang="fr-fr">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Navigateur : les coulisses du chargement</title>
 <!--
 Made by: Estelle Weyl
@@ -209,6 +210,7 @@ Les appareils mobiles ne sont pas</p>
 &lt;html lang="fr-fr"&gt;
  &lt;head&gt;
   &lt;meta charset="UTF-8"/&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
   &lt;title&gt;Mon site&lt;/title&gt;
   &lt;link rel="stylesheet" src="styles.css"/&gt;
   &lt;script src="myscript.js"&gt;&lt;/script&gt;
@@ -707,6 +709,7 @@ Les appareils mobiles ne sont pas</p>
 &lt;html lang="fr-fr"&gt;
  &lt;head&gt;
   &lt;meta charset="UTF-8"/&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
   &lt;title&gt;Mon site&lt;/title&gt;
   &lt;link rel="stylesheet" src="styles.css"/&gt;
   &lt;script src="myscript.js"&gt;&lt;/script&gt;
@@ -890,6 +893,7 @@ Les appareils mobiles ne sont pas</p>
 &lt;html lang="fr-fr"&gt;
  &lt;head&gt;
   &lt;meta charset="UTF-8"/&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
   &lt;title&gt;Mon site&lt;/title&gt;
   &lt;link rel="stylesheet" src="styles.css"/&gt;
   &lt;script src="myscript.js"&gt;&lt;/script&gt;
@@ -1053,6 +1057,24 @@ img {
 </section>
 </div>
 
+
+<div class="slide">
+<header>
+  <h1>Thread Principal</h1>
+</header>
+<section class="content">
+  <img src="img/thread.png" alt="Main thread" style="float: left; max-height: 40vh; margin: 1em 1.5em 0 0">
+  <ol>
+    <li>Analyse HTML / Creation du DOM</li>
+    <li>Analyse CSS / Creation du CSSOM</li>
+    <li>Conversion to JS en JS AST</li>
+    <li>Exécution javascript</li>
+    <li>Analyse du DOM et CSSOM / Rendu</li>
+  </ol>
+</section>
+</div>
+
+
 <div class="slide">
 <header>
   <h1>Le rendu</h1>
@@ -1069,8 +1091,17 @@ img {
   <h1>Style</h1>
 </header>
 <section class="content">
+  <p>La creation du "Render Tree" - Computed Styles</p>
+  <ul>
+    <li>UA stylesheets</li>
+    <li>User style sheets</li>
+    <li>Cascade</li>
+    <li><code>visibility: hidden</code>: oui</li>
+    <li><code>display: none</code>: non</li>
 </section>
 </div>
+
+
 
 <div class="slide">
 <header>
@@ -1078,6 +1109,7 @@ img {
 </header>
 <section class="content">
   <p>Calcule la disposition de chaque élément visible</p>
+  <p>Détermine les dimensions de tous les nœuds de l'arbre de rendu</p>
 </section>
 </div>
 
