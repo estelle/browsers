@@ -113,7 +113,6 @@ body,
   width: 100%;
   left: 0px;
   top: 0px;
-  overflow: scroll;
   background: radial-gradient(at bottom right, var(--center), 20%, var(--bg));
 }
 
@@ -239,6 +238,7 @@ h2 {
 }
 
 section, footer {
+  font-family: helvetica neue, helvetica, sans serif;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   margin: 20px 30px 0;
   display: block;
@@ -349,13 +349,43 @@ p.alt {
 }
 
 p.notes {
-  font-family: helvetica neue, helvetica, sans serif;
   opacity: 0.2;
   font-size: 16px;
   position: absolute;
   right: 40px;
   bottom: 40px;
   width: 40vw;
+}
+
+/* js table */
+.js {
+  border: none;
+  margin-bottom: 1px;
+}
+.js td {
+  padding: 10px 30px;
+}
+.js td[class] {
+  outline: 1px solid white;
+}
+.js .pause {
+  background: #0009;
+}
+.js .render {
+  background: orange;
+}
+.js .execute {
+  background-color: #0003;
+}
+.js .download {
+  background-color: white;
+  color: orange;
+}
+
+dt {
+  float: left;
+  margin-right: 0.2em;
+  color: var(--center);
 }
 
 table {

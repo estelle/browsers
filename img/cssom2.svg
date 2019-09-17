@@ -59,10 +59,11 @@
 		<text x="395" y="393">color: blue</text>
 	<path d="M85 420h200v50H85v-49z" />
 		<text x="110" y="450">FIGURE</text>
-	<path d="M170 490h200v50H170v-49z" />
-		<text x="195" y="520">img</text>
-	<path d="M390 490h200v50H390v-49z"  class="subnode"  />
-		<text x="395" y="510">border: none;</text><text x="395" y="530">width: 100%;</text>
+	<path d="M85 490h200v50H85v-49z" />
+		<text x="110" y="520">img</text>
+	<path d="M305 490h200v50H305v-49z"  class="subnode"  />
+		<text x="310" y="510">border: none;</text>
+		<text x="310" y="530">width: 100%;</text>
 		<!--<text x="395" y="540">width: 100%;</text>
     	<text x="395" y="560">height: auto;</text>-->
 	<g class="lines">
@@ -77,15 +78,15 @@
 		<path d="M85 314H70"/>
 		<path d="M175 384H140"/>
 			<path d="M390 384H340"/>
-		<path d="M85 444H70"/>
-		<path d="M175 514H140"/>
-			<path d="M390 514H340"/>
+		<path d="M85 444H70"></path>
+		<path d="M85 514H70"/>
+			<path d="M305 514H285"/>
 
 
 		<path d="M20 165l-0-68"/>
-		<path d="M70 445l-0-260"/>
+		<path d="M70 515l-0-330"/>
 		<path d="M140 383l-0-50"/>
-		<path d="M140 513l-0-50"/>
+		<!--<path d="M150 513l-0-50"/>-->
 	</g>
 </g>
 	</svg>

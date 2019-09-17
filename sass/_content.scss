@@ -16,6 +16,7 @@ h2 {
   font-size: 1.8rem;
 }
 section, footer {
+  font-family: helvetica neue, helvetica, sans serif;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   margin: 20px 30px 0;
   display: block;
@@ -114,11 +115,28 @@ p.alt {position: absolute; top: 110vh;}
   }
 }
 p.notes {
-  font-family: helvetica neue, helvetica, sans serif;
   opacity: 0.2;
   font-size: 16px;
   position: absolute;
   right: 40px;
   bottom: 40px;
   width: 40vw;
+}
+
+/* js table */
+.js { 
+    border: none;
+    margin-bottom: 1px;
+  td {padding: 10px 30px;}
+  td[class] {outline: 1px solid white;}
+  .pause {background: #0009;}
+  .render {background: orange;}
+  .execute {background-color: #0003;}
+  .download {background-color: white; color: orange;}
+}
+
+dt {
+  float: left;
+  margin-right: 0.2em;
+  color: var(--center);
 }

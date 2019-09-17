@@ -29,6 +29,7 @@ Based on: http://estelle.github.com/browsers
     bottom: -5px;
     font-size: small;
   }
+
 </style>
 <link rel="stylesheet" href="css/index.css" class="removeForAT">
 </head>
@@ -143,7 +144,7 @@ Based on: http://estelle.github.com/browsers
   <h1>Les réseaux mobiles</h1>
 </header>
 <section class="content">
-  <p class="notes">Le délai le plus long est le temps nécessaire pour que le téléphone se rende à la tour de téléphonie cellulaire et que la tour de téléphonie cellulaire revienne au téléphone. L'air est la cause de la plus grande latence</p>
+  <p class="notes">Le plus long délai est l'aller-rotoure entre le téléphone et la tour cellulaire. L'air est la cause de la plus grande latence</p>
 </section>
 </div> 
 
@@ -222,6 +223,7 @@ Les appareils mobiles ne sont pas</p>
   &lt;script src="anotherscript.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
+<p>Ce n'est pas si simple...</p>
 </div>
 
 
@@ -330,7 +332,7 @@ Les appareils mobiles ne sont pas</p>
     <li>Top level domain server</li>
     <li>Authoritative name servers (ns3.example.com)</li>
   </ol>
-  
+  <p class="notes">étapes de la demande</p>
 </section>
 </div>
 
@@ -710,7 +712,7 @@ Les appareils mobiles ne sont pas</p>
   &lt;script src="myscript.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;h1&gt;Ma Page<span style="color: var(--center);">&lt;/h1&gt;</span>
+  &lt;h1&gt;Ma Page&lt;/h1&gt;
   &lt;p&gt;Un paragraph avec un &lt;a href="//example.com"&gt;lien&lt;/a&gt;&lt;/p&gt;
   &lt;figure&gt;
     &lt;img src="monImage.jpg" alt="description de l'image"/&gt;
@@ -746,7 +748,14 @@ Les appareils mobiles ne sont pas</p>
 
 
 
-
+<div class="slide">
+<header>
+  <h1>DOM</h1>
+</header>
+<section class="content">
+  <p>décrit le contenu</p>
+</section>
+</div>
 
 <div class="slide">
 <header>
@@ -777,10 +786,89 @@ Les appareils mobiles ne sont pas</p>
   <h1>JavaScript</h1>
 </header>
 <section class="content">
-  <img src="img/async.png" alt="difference between async and defer">
+  <!--<img src="img/async.png" alt="difference between async and defer">-->
+  <table class="js">
+    <tr>
+      <td>&lt;script></td>
+      <td class="render">RENDER &nbsp; &nbsp; &nbsp; &nbsp;</td>     
+      <td colspan="2" class="pause">PAUSE</td>
+      <td colspan="2" class="render">RENDER</td>
+    </tr>
+    <tr>
+      <td></td>     
+      <td></td>
+      <td class="download">DOWNLOAD JS</td> 
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>      
+      <td></td>
+      <td class="execute">EXECUTE JS</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr><td colspan="6"></td></tr>
+    <tr>
+      <td>&lt;script defer></td>
+      <td colspan="4" class="render">RENDER</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>     
+      <td class="download">DOWNLOAD</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>     
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="execute">EXECUTE</td>
+    </tr>
+    <tr><td colspan="6"></td></tr>
+    <tr>
+      <td>&lt;script async></td>
+      <td colspan="2" class="render">RENDER</td>
+      <td class="pause">PAUSE</td>
+      <td colspan="2" class="render">RENDER</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>      
+      <td class="download">DOWNLOAD</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>      
+      <td></td>
+      <td class="execute">EXECUTE</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
 </section>
 </div>
 
+<div class="slide">
+<header>
+  <h1>DOM</h1>
+</header>
+<section class="content">
+  <img src="img/blockeddom.svg" style="transform: translateY(-40px);">
+</section>
+</div>
 
 <div class="slide">
 <header>
@@ -791,6 +879,68 @@ Les appareils mobiles ne sont pas</p>
 </section>
 </div>
 
+
+
+
+<div class="slide">
+  <header><h1>DOM</h1></header>
+  <section class="content">
+    <pre>
+&lt;!doctype HTML&gt;
+&lt;html lang="fr-fr"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"/&gt;
+  &lt;title&gt;Mon site&lt;/title&gt;
+  &lt;link rel="stylesheet" src="styles.css"/&gt;
+  &lt;script src="myscript.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Ma Page<span style="color: var(--center);">&lt;/h1&gt;</span>
+  &lt;p&gt;Un paragraph avec un &lt;a href="//example.com"&gt;lien&lt;/a&gt;&lt;/p&gt;
+  &lt;figure&gt;
+    &lt;img src="monImage.jpg" alt="description de l'image"/&gt;
+    &lt;caption&gt;Ma photo&lt;/caption&gt;
+  &lt;/figure&gt;
+  &lt;script src="anotherscript.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+  </section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>CSSOM</h1>
+</header>
+<section class="content">
+  <p>décrit les règles de style</p>
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>CSSOM</h1>
+</header>
+<section class="content">
+
+ 
+<pre>:root {
+  font-size: 16px;
+}
+body {
+  color: #333333;
+}
+h1 {
+  font-size: 2rem;
+}
+p a {
+  color: blue;
+}
+figure img {
+  border: none;
+  width: 100%;
+}</pre>
+</section>
+</div>
 
 <div class="slide">
 <header>
@@ -814,9 +964,41 @@ p a {
 }
 figure img {
   border: none;
+  width: 100%;
 }</pre>
 </section>
 </div>
+
+
+<div class="slide">
+<header>
+  <h1>CSSOM</h1>
+</header>
+<section class="content">
+
+  <img src="img/cssom2.svg" style="transform: translateY(-40px); float: right" alt="CSSOM">
+
+<pre>:root {
+  font-size: 16px;
+}
+body {
+  color: #333333;
+}
+h1 {
+  font-size: 2rem;
+}
+p a {
+  color: blue;
+}
+img {
+  border: none;
+  width: 100%;
+}</pre>
+</section>
+</div>
+
+
+
 
 <div class="slide" style="background-image: url(img/aom.png); background-size: cover; background-position: top left;">
 <header>
@@ -876,7 +1058,8 @@ figure img {
   <h1>Le rendu</h1>
 </header>
 <section class="content">
-  <img src="img/rendertree.svg" alt="render process">
+<p>DOM et CSSOM: combinés pour former l’arbre de rendu. Contient que les nœuds nécessaires au rendu de la page.</p>
+  <img src="img/rendertree.svg" alt="render process" style="margin-top: 1em">
 </section>
 </div>
 
@@ -894,6 +1077,7 @@ figure img {
   <h1>Layout</h1>
 </header>
 <section class="content">
+  <p>Calcule la disposition de chaque élément visible</p>
 </section>
 </div>
 
@@ -902,6 +1086,7 @@ figure img {
   <h1>Paint</h1>
 </header>
 <section class="content">
+  <p>Rend les pixels à l'écran</p>
 </section>
 </div>
 
