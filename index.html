@@ -334,7 +334,7 @@ Les appareils mobiles ne sont pas</p>
     <li>Top level domain server</li>
     <li>Authoritative name servers (ns3.example.com)</li>
   </ol>
-  <p class="notes">étapes de la demande</p>
+  <p class="notes">Étapes de la demande</p>
 </section>
 </div>
 
@@ -372,12 +372,32 @@ Les appareils mobiles ne sont pas</p>
 </section>
 </div>
 
+
+<div class="slide">
+<header>
+  <h1>Prochainment?</h1>
+</header>
+<section class="content">
+    <div class="twoimages">
+    <img src="img/laptop.svg" alt="lap top computer"> 
+    <ul class="transport">
+        →→→ <span>?</span> →→→
+      </li>
+    </ul>
+    <img src="img/server.svg" alt="server">
+  </div>
+  </section>
+</div>
+
+
+
+
 <div class="slide intro">
 <header>
   <h1>Négociation TCP</h1>
 </header>
 <section class="content">
-  <p>négociation de liaison TCP à trois voies</p>
+  <p>Négociation de liaison TCP à trois voies</p>
   <p>TCP handshake</p>
 </section>
 </div>
@@ -387,7 +407,7 @@ Les appareils mobiles ne sont pas</p>
   <h1>Négociation TCP</h1>
 </header>
 <section class="content">
-  <p>établissement d'une connexion</p>
+  <p>Établissement d'une connexion</p>
     <div class="twoimages">
     <img src="img/laptop.svg" alt="lap top computer"> 
     <ul class="transport">
@@ -645,7 +665,7 @@ Les appareils mobiles ne sont pas</p>
         →→→ <span>HTTP-GET-REQUEST</span> →→→
       </li>
       <li> 
-        ←←← <span>14kb</span> ←←←<br/>
+        ←←← <span class="ttfb">14kb</span> ←←←<br/>
         →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
         ←←← <span>28kb</span> ←←←<br/>
         →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
@@ -675,7 +695,7 @@ Les appareils mobiles ne sont pas</p>
         →→→ <span>HTTP-GET-REQUEST</span> →→→
       </li>
       <li> 
-        ←←← <span>14kb</span> ←←←<br/>
+        ←←← <span class="ttfb">14kb</span> ←←←<br/>
         →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
         ←←← <span>28kb</span> ←←←<br/>
         →→→ <span style="color: var(--center)">ACK</span> →→→<br/>
@@ -702,7 +722,7 @@ Les appareils mobiles ne sont pas</p>
 
 <div class="slide">
 <header>
-  <h1>Reponse</h1>
+  <h1>Reponse<span class="ttfb"></span></h1>
 </header>
 <section class="content">  <pre>
 &lt;!doctype HTML&gt;
@@ -741,6 +761,13 @@ Les appareils mobiles ne sont pas</p>
 </header>
 <section class="content">
   <ul>
+    <li>DOM</li>
+    <li>CSSOM</li>
+    <li>AOM</li>
+    <li>AST / Compilation JS</li>
+  </ul>
+<p>Ce n'est pas si simple</p>
+  <ul class="notes">
     <li>Commence immediatement (14kb)</li>
     <li>Main thread</li>
     <li>Scanner de préchargement</li>
@@ -756,7 +783,7 @@ Les appareils mobiles ne sont pas</p>
   <h1>DOM</h1>
 </header>
 <section class="content">
-  <p>décrit le contenu</p>
+  <p>Décrit le contenu</p>
 </section>
 </div>
 
@@ -780,6 +807,7 @@ Les appareils mobiles ne sont pas</p>
 &lt;script src="myscript.js" <strong>async</strong>>&lt;/script>
 &lt;img src="monImage.jpg" alt="description de l'image"/>
 &lt;script src="unautrescript.js" <strong>defer</strong>>&lt;/script></pre>
+<img src="img/thread.png" alt="pas le thread principal" style="float:right; opacity: 0.3; max-height: 33vh; background-image: linear-gradient(to bottom right, transparent 48%, white 48%52%, transparent 52%), linear-gradient(to bottom left, transparent 48%, white 48%52%, transparent 52%)">
 </section>
 </div>
 
@@ -916,7 +944,7 @@ Les appareils mobiles ne sont pas</p>
   <h1>CSSOM</h1>
 </header>
 <section class="content">
-  <p>décrit les règles de style</p>
+  <p>Décrit les règles de style</p>
 </section>
 </div>
 
@@ -1082,6 +1110,7 @@ img {
 <section class="content">
 <p>DOM et CSSOM: combinés pour former l’arbre de rendu. Contient que les nœuds nécessaires au rendu de la page.</p>
   <img src="img/rendertree.svg" alt="render process" style="margin-top: 1em">
+
 </section>
 </div>
 
@@ -1098,6 +1127,8 @@ img {
     <li>Cascade</li>
     <li><code>visibility: hidden</code>: oui</li>
     <li><code>display: none</code>: non</li>
+  </ul>
+    <p>Détermine les règles CSS pour chaque nœud visible (et caché).</p>
 </section>
 </div>
 
@@ -1129,7 +1160,7 @@ img {
 
 <div class="slide">
 <header>
-  <h1>Layout</h1>
+  <h1>Layout <span style="color: var(--center)">(Nouveau)</span></h1>
 </header>
 <section class="content">
   <img src="img/mobileshot2.png" alt="screen shot of mobile screen" style="float: right">
@@ -1147,56 +1178,172 @@ img {
   <h1>Paint</h1>
 </header>
 <section class="content">
-  <p>Rend les pixels à l'écran</p>
+  <ul>
+  <li>Rend les pixels à l'écran</li>
+  <li>Nombre de pixels = h * w * dppx</li>
+  <li>Détermine le [r, g, b, a] pour chaque pixel.</li>
+  <li>Frame buffer = tableau de tableau [r, g, b, a]</li>
+  <li>first paint / first meaningful paint</li>
+</ul>
 </section>
 </div>
 
 <div class="slide">
 <header>
-  <h1>Composting</h1>
+  <h1>Composite: Paint layers on the GPU</h1>
 </header>
 <section class="content">
+  <ul>
+    <li>animating opacity or transforms</li>
+    <li>3D transforms</li>
+    <li>higher z-index</li>
+    <li>video and canvas</li>
+    <li>CSS filters</li>
+    <li>will-change property</li>
+    <li>isolation: isolate</li>
+  </ul>
 </section>
 </div>
+
+<div class="slide">
+<header>
+  <h1>Vitte sur le GPU</h1>
+</header>
+<section class="content js">
+  <p> Merges the layers to calculate rgba <br/>value of each pixel</p>
+  <div class="render">[255, 165, 0, 1]</div>
+  <div class="execute">[0, 0, 0, 0.2]</div>
+  <div class="composite">[204, 132, 0, 1]</div>
+  <style>
+    .content.js div {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      top: 100px;
+      padding: 10px;
+      right: 100px;
+      font-size: 0.5rem;
+      font-family: monospace;
+      box-sizing: border-box;
+    }
+    .content.js .execute {
+      top: 150px;
+      right: 150px;
+      padding-top: 160px;
+    }
+    .content.js .composite {
+      top: 200px;
+      right: 110px;
+    }
+  </style>
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>Reflow - recalculate almost everything</h1>
+</header>
+<section class="content">
+  When a change is made:
+  <ol>
+    <li>re-style</li>
+    <li>re-layout</li>
+    <li>re-paint</li>
+    <li>re-composite</li>
+  </ol>
+</section>
+</div>
+
+
+<div class="slide">
+<header>
+  <h1>Reflow</h1>
+</header>
+<section class="content">
+  <img src="img/mobileshot1.png" alt="screen shot of mobile screen" style="float: right">
+  <pre>img {
+    width: 100%;
+    
+  }</pre>
+  <pre>&lt;img src="monImage.jpg" alt="description de l'image"/&gt;</pre>
+</section>
+</div>
+
+<div class="slide">
+<header>
+  <h1>Re-Layout <span style="color: var(--center)">pas necessaire</span></h1>
+</header>
+<section class="content">
+  <img src="img/mobileshot2.png" alt="screen shot of mobile screen" style="float: right">
+  <pre>img {
+    width: 100%;
+    height: auto;
+  }</pre>
+  <pre>&lt;img src="monImage.jpg" alt="description de l'image"
+    width="100" height="100"/&gt;</pre>
+  <ol class="temphidden">
+    <li style="opacity: 0.2">re-style</li>
+    <li style="opacity: 0.2">re-layout</li>
+    <li>re-paint</li>
+    <li>re-composite?</li>
+  </ol>
+</section>
+</div>
+
+
+
+
 
 <div class="slide intro">
 <header>
   <h1>Interaction de l'utilisateur</h1>
 </header>
-</div>
-<!-- templates -->
-<div class="slide object">
-<header>
-  <h1></h1>
-</header>
-<object data=""></object>
-<a href="" class="objectlink">Open</a>
+<section class="content">
+</section>
 </div>
 
 <div class="slide">
 <header>
-  <h1></h1>
+  <h1>Le but</h1>
 </header>
 <section class="content">
- <style contenteditable class="editme"></style>
+  <p>Pas de embouteillage sur le thread principal. Que ca peut repondre a l'utilisateur en moins de 50ms, et peut anime en moins de 16.67ms (60fps)</p>
+  <ul>
+    <li><img src="img/thread.png" alt="" style="float: right; opacity: 0.2; max-height: 33vh">jank</li>
+    <li>scroll</li>
+    <li>user interaction</li>
+    <li>animation</li>
 </section>
 </div>
-
 
 <div class="slide intro">
 <header>
-  <h1></h1>
-</header>
-</div>
-
-<div class="slide">
-<header>
-  <h1></h1>
+  <h1>Merci</h1>
 </header>
 <section class="content">
+  https://estelle.github.com/browsers
 </section>
 </div>
-<!-- end templates -->
+
+<div class="slide intro">
+<section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
+<div>
+    <h1>Estelle Weyl</p>
+    <p><a href="http://www.standardista.com">standardista.com</a><br><a href="https://www.PerfMattersConf.com">PerfMattersConf.com</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></p>
+ </div>
+<div style="margin: 0 -70px;">
+    <div class="floatright books">
+      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
+      <img src="img/fem.png" alt="Front End Masters">
+      <img src="https://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
+      <img src="https://akamaicovers.oreilly.com/images/0636920041658/cat.gif" alt="Animations and Transitions with CSS"/>
+      <img src="https://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/>
+      <img src="https://covers.oreillystatic.com/images/0636920012726/cat.gif" alt="CSS: The Definitive Guide">
+      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
+    </div>
+</div>
+
+<span style="color: white; position: absolute; bottom: 10px; right: 10px; font-family: fantasy;">@estellevw</span>
 
    </div>
 </div>

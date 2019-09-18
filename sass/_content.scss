@@ -114,13 +114,16 @@ p.alt {position: absolute; top: 110vh;}
     line-height: 0.8;
   }
 }
-p.notes {
+p.notes, ul.notes {
   opacity: 0.2;
-  font-size: 16px;
+  font-size: 24px;
   position: absolute;
   right: 40px;
   bottom: 40px;
   width: 40vw;
+}
+ul.notes li {
+  font-size: inherit;
 }
 
 /* js table */
